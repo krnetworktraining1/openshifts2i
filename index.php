@@ -3,6 +3,6 @@
   <title>PHP Test</title>
  </head>
  <body>
- <?php echo '<p>SAINI</p>'; ?> 
+ <?php echo '<p>PLACE HOLDER</p>'; ?> 
  </body>
 </html>
