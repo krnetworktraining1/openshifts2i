@@ -3,6 +3,6 @@
   <title>PHP Test</title>
  </head>
  <body>
- <?php echo '<p>Content Changer</p>'; ?> 
+ <?php echo '<p>content changer</p>'; ?> 
  </body>
 </html>
