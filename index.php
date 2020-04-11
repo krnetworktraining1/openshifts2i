@@ -1,8 +1,8 @@
 <html>
  <head>
-  <title>PHP Test</title>
+  <title>hello PHP Test</title>
  </head>
  <body>
- <?php echo '<p>code  has been  again</p>'; ?> 
+ <?php echo '<p>s2i process</p>'; ?> 
  </body>
 </html>
