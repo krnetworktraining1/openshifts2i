@@ -3,6 +3,6 @@
   <title>hello PHP Test</title>
  </head>
  <body>
- <?php echo '<p> 3 rds2i process</p>'; ?> 
+ <?php echo '<p> Hi BC</p>'; ?> 
  </body>
 </html>
