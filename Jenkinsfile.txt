@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Clone') {
+            steps {
+             git   "https://github.com/krnetworktraining1/openshifts2i.git"
+            }
+        }
+        stage('Docker build') {
+            steps {
+                sh  "docker build -t php:latest ."
+            }
+        }
+        stage('tag') {
+            steps {
+                sh "docker tag php:latest ramprakashupadhyay123/php:latest"
+                sh  "docker push ramprakashupadhyay123/php:latest"
+            }
+        }
+     stage ('Create Container') {
+     steps {
+             sh "docker run -d -p 8888:8080 ramprakashupadhyay123/php:latest"
+}
+}    
+}
+}
