@@ -3,6 +3,6 @@
   <title>hello PHP Test2</title>
  </head>
  <body>
- <?php echo '<p>Developer source change</p>'; ?> 
+ <?php echo '<p>Developer source code update</p>'; ?> 
  </body>
 </html>
