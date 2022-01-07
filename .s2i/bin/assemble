@@ -9,7 +9,7 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 echo "---> Installing application source"
-# cp -af /tmp/src/. ./
+cp -af /tmp/src/. ./
 
 cp  -Rf   /tmp/src/*.html    ./
 DATE=`date +%F`
