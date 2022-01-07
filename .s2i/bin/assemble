@@ -12,9 +12,6 @@ echo "---> Installing application source"
 cp -af /tmp/src/. ./
 
 cp  -Rf   /tmp/src/*.html    ./
-DATE=`date +%F`
-echo "$DATE Hello world" >> ./info.html
-
 
 # Fix source directory permissions
 fix-permissions ./
