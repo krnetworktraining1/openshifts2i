@@ -1,4 +1,4 @@
-FROM  centos:latest
+FROM  centos:7
 RUN   yum install httpd python36 -y
 RUN  sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 RUN echo "print('Hello, world!')" >  mail.py  &&  chmod u+x mail.py
