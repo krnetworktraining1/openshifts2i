@@ -1,1 +1,1 @@
-date  > /tmp/abc
+sdfsdfdsfdsf fads fa
