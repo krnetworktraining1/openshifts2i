@@ -1,1 +1,5 @@
-replicaCount: 5
+replicaCount: 8
+resources:
+  requests:
+      memory: 120Mi
+      
