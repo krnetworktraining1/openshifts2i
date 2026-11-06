@@ -3,3 +3,4 @@ resources:
   requests:
       memory: 120Mi
       
+ oc logs prometheus-k8s-0   -n openshift-monitoring   -c prometheus   --since=1h | grep -i -E 'Evaluating rule failed|err='
