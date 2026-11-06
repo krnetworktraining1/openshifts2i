@@ -1,0 +1,32 @@
+
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: vm-performance-alerts
+  namespace: openshift-monitoring
+spec:
+  groups:
+    - name: vm-performance
+      interval: 30s
+      rules:
+
+        # CPU utilization greater than 40%
+        - alert: VMCPUUtilizationAbove40
+          expr: |
+            (
+              sum by (name, namespace) (
+                rate(kubevirt_vmi_cpu_usage_seconds_total[5m])
+              )
+              /
+              on (name, namespace)
+              kubevirt_vm_resource_requests{
+                resource="cpu",
+                unit="cores"
+              }
+            ) * 100 > 40
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "VM CPU utilization above 40%"
+            description: "VM {{ $labels.name }} in namespace {{ $labels.namespace }} has CPU utilization above 40%."
